@@ -1,0 +1,141 @@
+@font-face {
+    src: url(/assets/fonts/HankenGrotesk-VariableFont_wght.ttf);
+    font-family: 'Hanken';
+    font-weight: 100 900;
+}
+body{
+    font-family: 'Hanken', sans-serif;
+    display: grid;
+    place-items: center;
+}
+.Main{
+    box-shadow: 12px 19px 22px hsl(221, 38%, 93%);
+    border-radius: 12px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 34rem;
+    margin: 90px;
+}
+.Main title{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* the 1st section */
+.Result{
+    border-radius: 12px;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    align-content: center;
+    background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    color: white;
+    padding: 0 20px 20px 20px;
+    gap: 0.3rem;
+}
+.Result .score{
+    border-radius: 50%;
+    width: 120px;
+    background-image: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+}
+.Result .title, p{
+    color: #ced4da;
+}
+.score p{
+    color: #ced4da;
+    font-weight: 600;
+}
+/* the 2nd section */
+.Summary{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    padding: 0 20px 20px 20px;
+}
+
+.Reaction{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: hsl(0, 70%, 97%);
+    max-height: 50px;
+    margin: 5px;
+    border-radius: 12px;
+}
+.Reaction h4{
+    color: hsl(0, 100%, 67%);
+}
+ .Memory{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: hsl(39, 70%, 97%);
+    max-height: 50px;
+    margin: 5px;
+    border-radius: 12px;
+}
+.Memory h4{
+    color: hsl(39, 100%, 56%);
+}
+.Verbal{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: hsl(166, 70%, 97%);
+    max-height: 50px;
+    margin: 5px;
+    border-radius: 12px;
+}
+.Verbal h4{
+    color: hsl(166, 100%, 37%);
+}
+.Visual{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: hsl(234, 70%, 97%);
+    max-height: 50px;
+    margin: 5px 5px 30px 5px;
+    border-radius: 12px;
+}
+.Visual h4{
+    color: hsl(234, 85%, 45%);
+}
+.Summary .s-itm{
+    display: flex;
+    justify-content: space-between;
+}
+.Summary .s-res{
+    color: hsl(224, 30%, 27%);
+    font-weight: bold;
+}
+.Continue{
+    border: none;
+    border-radius: 25px;
+    color: white;
+    background: hsl(224, 30%, 27%);
+    cursor: pointer;
+}
+/*? this one for fun ":D */
+.Continue:hover{
+    border: 1px solid hsl(224, 30%, 27%);
+    background: transparent;
+    transition: all .40s ease;
+    color: hsl(224, 30%, 27%);
+}
+@media (max-width: 500px){
+    body{
+        margin: 0;
+    }
+    .Main{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        max-width: 19rem;
+        /* max-width: 412px; this is my mobile screen width  and it doesn't seems to be matching the design :\ */
+        margin: 0 0 25px 0;
+    }
+    .Result{
+        border-radius: 0 0 15px 15px;
+        height: 20rem;
+    }
+}
